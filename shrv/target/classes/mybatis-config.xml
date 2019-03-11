@@ -4,14 +4,13 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.sinc.shrv.model.vo" alias="band"/>
-		<typeAlias type="com.sinc.shrv.model.vo" alias="certificate"></typeAlias>
-		<typeAlias type="com.sinc.shrv.model.vo" alias="department"></typeAlias>
-		<typeAlias type="com.sinc.shrv.model.vo" alias="employeecertificate"></typeAlias>
-		<typeAlias type="com.sinc.shrv.model.vo" alias="employee"></typeAlias>
-		<typeAlias type="com.sinc.shrv.model.vo" alias="grade"></typeAlias>
-		<typeAlias type="com.sinc.shrv.model.vo" alias="team"></typeAlias>
-		<typeAlias type="com.sinc.shrv.model.vo" alias="workinfo"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo.BandVO" alias="band"/>
+		<typeAlias type="com.sinc.shrv.model.vo.CertificateVO" alias="certificate"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo.DepartmentVO" alias="department"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo.EmployeeCertificateVO" alias="employeecertificate"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo.EmployeeVO" alias="employee"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo.GradeVO" alias="grade"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo.TeamVO" alias="team"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo.WorkInfoVO" alias="workinfo"></typeAlias>
 	</typeAliases>
 </configuration>
-
