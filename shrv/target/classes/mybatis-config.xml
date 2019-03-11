@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.sinc.shrv.model.vo" alias="band"/>
+		<typeAlias type="com.sinc.shrv.model.vo" alias="certificate"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo" alias="department"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo" alias="employeecertificate"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo" alias="employee"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo" alias="grade"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo" alias="team"></typeAlias>
+		<typeAlias type="com.sinc.shrv.model.vo" alias="workinfo"></typeAlias>
+	</typeAliases>
+</configuration>
+
