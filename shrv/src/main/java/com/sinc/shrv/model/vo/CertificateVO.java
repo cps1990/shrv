@@ -6,7 +6,6 @@ public class CertificateVO {
 	
 	public CertificateVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public CertificateVO(int certificate_id, String certificate_name) {

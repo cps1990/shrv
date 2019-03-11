@@ -6,7 +6,6 @@ public class WorkInfoVO {
 	
 	public WorkInfoVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public WorkInfoVO(int emp_id, String date, String start_time, String end_time, String add_time, String total_time) {

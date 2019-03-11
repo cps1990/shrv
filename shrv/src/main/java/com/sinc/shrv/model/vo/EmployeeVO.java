@@ -6,7 +6,6 @@ public class EmployeeVO {
 	
 	public EmployeeVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public EmployeeVO(int emp_id, int salary, int team_id, int band_id, int grade_id, String emp_name, String hire_date,

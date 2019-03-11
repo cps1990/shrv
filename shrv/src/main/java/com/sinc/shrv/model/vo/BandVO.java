@@ -6,7 +6,6 @@ public class BandVO {
 	
 	public BandVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	public BandVO(int band_id, String band_name) {

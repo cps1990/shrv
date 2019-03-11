@@ -6,7 +6,6 @@ public class DepartmentVO {
 	
 	public DepartmentVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public DepartmentVO(int dept_id, String dept_name) {

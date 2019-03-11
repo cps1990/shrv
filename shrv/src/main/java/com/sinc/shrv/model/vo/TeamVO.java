@@ -6,7 +6,6 @@ public class TeamVO {
 	
 	public TeamVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public TeamVO(int dept_id, int team_id, String team_name) {

@@ -6,7 +6,6 @@ public class EmployeeCertificateVO {
 	
 	public EmployeeCertificateVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public EmployeeCertificateVO(int certificate_id, int emp_id, String date) {

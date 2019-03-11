@@ -5,7 +5,6 @@ public class GradeVO {
 
 	public GradeVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public GradeVO(int grade_id) {
