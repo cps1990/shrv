@@ -1,6 +1,5 @@
 package com.sinc.project.shrv.ctrl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -21,29 +20,14 @@ public class DataVisualizationCtrl {
 	
 	@RequestMapping(value="/shrv/getHumanResourceInfo.do", method=RequestMethod.POST)
 	@ResponseBody
-	public List<Object> getHumanResourceInfo (String searchType, String searchKeyword) {
+	public List<Object> getHumanResourceInfo () {
 		
 		System.out.println("getHumanResourceInfo Controller");
-		List<Object> list = humanResourceService.list();
-		System.out.println(list);
-		//System.out.println(boardList.toString());
 		
-		/*
-		 * System.out.println("BoardCtrl search");
-		 * 
-		 * Map<String, String> map = new HashMap<String, String>();
-		 * map.put("searchType", searchType); map.put("searchKeyword", searchKeyword);
-		 * System.out.println(map); List<Object> list = boardService.search(map);
-		 * 
-		 * System.out.println(list);
-		 */
+		// 받아온 데이터를 파라미터에 추가하여 서비스단 getHumanResourceInfo 함수 호출
+		List<Object> list = humanResourceService.getHumanResourceInfo();
+		System.out.println(list);
 		return list;
 	}
-	
-	/*
-	 * @RequestMapping(value="/register.do", method=RequestMethod.GET) public String
-	 * register() { System.out.println("BoardCtrl register"); return
-	 * "/board/register"; }
-	 */
 
 }

@@ -17,17 +17,24 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 	private HumanResourceDao humanResourceDao;
 
 	@Override
-	public List<Object> list() {
-		System.out.println("HumanResourceServiceImpl list");
+	public List<Object> getHumanResourceInfo() {
+		System.out.println("HumanResourceServiceImpl getHumanResourceInfo");
+		
 		List<Object> list = new ArrayList<Object>();
+		// dataAnalysis() 호출
+		// dao 함수 호출하여 데이터 리턴
+		
 		return humanResourceDao.listRow();
 	}
-
-	@Override
-	public List<Object> search(Map<String, String> map) {
-		System.out.println("HumanResourceServiceImpl search");
-		List<Object> list = new ArrayList<Object>();
-		//humanResourceDao.search(map);
-		return list;
+	
+	/**
+	 * 데이터 분석하는 알고리즘
+	 * 각 데이터를 분석해서 호출해야하는 dao 함수 리턴
+	 * @return Object
+	 */
+	private Object dataAnalysis() {
+		Object obj = new Object();
+		return obj;
 	}
+	
 }

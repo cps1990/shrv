@@ -5,6 +5,5 @@ import java.util.Map;
 
 public interface HumanResourceService {
 
-	public List<Object> list();
-	public List<Object> search(Map<String, String> map);
+	public List<Object> getHumanResourceInfo();
 }
