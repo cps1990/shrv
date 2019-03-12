@@ -9,6 +9,7 @@
 		<typeAlias type="com.sinc.project.shrv.model.vo.CertificateVO" alias="certificate"></typeAlias>
 		<typeAlias type="com.sinc.project.shrv.model.vo.DepartmentVO" alias="department"></typeAlias>
 		<typeAlias type="com.sinc.project.shrv.model.vo.EmployeeCertificateVO" alias="employeecertificate"></typeAlias>
+		<typeAlias type="com.sinc.project.shrv.model.vo.EmployeeGradeVO" alias="employeegrade"></typeAlias>
 		<typeAlias type="com.sinc.project.shrv.model.vo.EmployeeVO" alias="employee"></typeAlias>
 		<typeAlias type="com.sinc.project.shrv.model.vo.GradeVO" alias="grade"></typeAlias>
 		<typeAlias type="com.sinc.project.shrv.model.vo.TeamVO" alias="team"></typeAlias>
