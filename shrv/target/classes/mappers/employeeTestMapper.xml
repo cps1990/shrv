@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.sinc.project.shrv.employeeTest">
+	<!-- <select id="employeeList" resultType="employee" flushCache="true" useCache="true">
+		SELECT 
+			EMP_ID, EMP_NAME, SALARY, HIRE_DATE, PHONE, EMAIL, WORK_STATE
+		FROM 
+			EMPLOYEETEST
+	</select> -->
+	<select id="boardListRow" resultType="board" flushCache="true" useCache="true">
+		SELECT 
+			SEQ, TITLE, CONTENT, WRITER, REGDATE, CNT 
+		FROM 
+			FRM_BOARD_TBL
+		ORDER BY 
+			SEQ DESC
+	</select>
+</mapper>  
+
+
+
+
+
+
+
+
+
+
+
