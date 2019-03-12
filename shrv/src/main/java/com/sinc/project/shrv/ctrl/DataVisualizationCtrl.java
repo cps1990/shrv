@@ -1,6 +1,8 @@
 package com.sinc.project.shrv.ctrl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -20,14 +22,16 @@ public class DataVisualizationCtrl {
 	
 	@RequestMapping(value="/shrv/getHumanResourceInfo.do", method=RequestMethod.POST)
 	@ResponseBody
-	public List<Object> getHumanResourceInfo () {
+	public Map<String, String> getHumanResourceInfo (String data) {
 		
 		System.out.println("getHumanResourceInfo Controller");
-		
+		System.out.println(data);
 		// 받아온 데이터를 파라미터에 추가하여 서비스단 getHumanResourceInfo 함수 호출
 		List<Object> list = humanResourceService.getHumanResourceInfo();
 		System.out.println(list);
-		return list;
+		Map<String, String> result = new HashMap();
+		result.put("recvData", "결과 url입니다.");
+		return result;
 	}
 
 }
