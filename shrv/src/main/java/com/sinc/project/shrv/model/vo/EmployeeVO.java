@@ -1,4 +1,4 @@
-package com.sinc.shrv.model.vo;
+package com.sinc.project.shrv.model.vo;
 
 public class EmployeeVO {
 	private int emp_id, salary, team_id, band_id, grade_id;

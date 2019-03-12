@@ -1,4 +1,4 @@
-package com.sinc.shrv.model.vo;
+package com.sinc.project.shrv.model.vo;
 
 public class BandVO {
 	private int band_id;

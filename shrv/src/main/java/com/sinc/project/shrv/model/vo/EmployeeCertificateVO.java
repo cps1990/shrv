@@ -1,4 +1,4 @@
-package com.sinc.shrv.model.vo;
+package com.sinc.project.shrv.model.vo;
 
 public class EmployeeCertificateVO {
 	private int certificate_id, emp_id;

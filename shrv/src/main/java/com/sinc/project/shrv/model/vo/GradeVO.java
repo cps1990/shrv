@@ -1,15 +1,17 @@
-package com.sinc.shrv.model.vo;
+package com.sinc.project.shrv.model.vo;
 
 public class GradeVO {
 	private int grade_id;
+	private String grade_name;
 
 	public GradeVO() {
 		super();
 	}
 
-	public GradeVO(int grade_id) {
+	public GradeVO(int grade_id, String grade_name) {
 		super();
 		this.grade_id = grade_id;
+		this.grade_name = grade_name;
 	}
 
 	public int getGrade_id() {
@@ -18,6 +20,14 @@ public class GradeVO {
 
 	public void setGrade_id(int grade_id) {
 		this.grade_id = grade_id;
+	}
+	
+	public String getGrade_name() {
+		return grade_name;
+	}
+
+	public void setGrade_name(String grade_name) {
+		this.grade_name = grade_name;
 	}
 
 	@Override
