@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
+import org.springframework.ui.ModelMap;
 
 import com.sinc.project.shrv.model.sql.HumanResourceDao;
 
@@ -27,7 +29,8 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 		List<Object> list = new ArrayList<Object>();
 		// dataAnalysis() 호출
 		// dataAnalysis 에서 데이터 분석하여 나온 dao 함수 호출하여 결과 리턴
-		dataAnalysis(data);
+		//dataAnalysis(data);
+		
 		// dao 함수 호출하여 데이터 리턴
 		return humanResourceDao.listRow();
 	}
@@ -46,7 +49,7 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 		            System.out.println(token);
 		        }
 		
-		return "https://www.naver.com";
+		return "";
 	}
 	
 }
