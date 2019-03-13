@@ -34,7 +34,7 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 		// dao 함수 호출하여 데이터 리턴
 		return humanResourceDao.listRow();
 	} 
-	
+	 
 	/**
 	 * 데이터 분석하는 알고리즘
 	 * 각 데이터를 분석해서 호출해야하는 dao 함수 리턴
