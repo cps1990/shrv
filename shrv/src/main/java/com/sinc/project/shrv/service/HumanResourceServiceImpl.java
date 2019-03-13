@@ -10,19 +10,25 @@ import org.springframework.stereotype.Service;
 
 import com.sinc.project.shrv.model.sql.HumanResourceDao;
 
+import kr.co.shineware.nlp.komoran.constant.DEFAULT_MODEL;
+import kr.co.shineware.nlp.komoran.core.Komoran;
+import kr.co.shineware.nlp.komoran.model.Token;
+
 @Service("humanResourceService")
 public class HumanResourceServiceImpl implements HumanResourceService {
 
 	@Resource(name="humanResourceDao")
 	private HumanResourceDao humanResourceDao;
 
-	@Override 
-	public List<Object> getHumanResourceInfo() {
+	@Override
+	public List<Object> getHumanResourceInfo(String data) {
 		System.out.println("HumanResourceServiceImpl getHumanResourceInfo");
 		
 		List<Object> list = new ArrayList<Object>();
 		// dataAnalysis() 호출
 		// dataAnalysis 에서 데이터 분석하여 나온 dao 함수 호출하여 결과 리턴
+		dataAnalysis(data);
+		// dao 함수 호출하여 데이터 리턴
 		return humanResourceDao.listRow();
 	}
 	
@@ -32,9 +38,15 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 	 * @return Object
 	 */
 	@Override
-	public String dataAnalysis(String text) {
-		Object obj = new Object();
-		return "";
+	public String dataAnalysis(String data) {
+		
+		Komoran komoran = new Komoran(DEFAULT_MODEL.FULL);
+		  List<Token> tokens = komoran.analyze(data).getTokenList();
+		        for(Token token : tokens) {
+		            System.out.println(token);
+		        }
+		
+		return "https://www.naver.com";
 	}
 	
 }
