@@ -17,11 +17,11 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 	private HumanResourceDao humanResourceDao;
 
 	@Override
-	public List<Object> getHumanResourceInfo() {
+	public List<Object> getHumanResourceInfo(String data) {
 		System.out.println("HumanResourceServiceImpl getHumanResourceInfo");
 		
 		List<Object> list = new ArrayList<Object>();
-		// dataAnalysis() 호출
+		dataAnalysis(data);
 		// dao 함수 호출하여 데이터 리턴
 		
 		return humanResourceDao.listRow();
@@ -32,9 +32,11 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 	 * 각 데이터를 분석해서 호출해야하는 dao 함수 리턴
 	 * @return Object
 	 */
-	private Object dataAnalysis() {
-		Object obj = new Object();
-		return obj;
+	@Override
+	public String dataAnalysis(String data) {
+		
+		
+		return "";
 	}
 	
 }

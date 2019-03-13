@@ -27,10 +27,10 @@ public class DataVisualizationCtrl {
 		System.out.println("getHumanResourceInfo Controller");
 		System.out.println(data);
 		// 받아온 데이터를 파라미터에 추가하여 서비스단 getHumanResourceInfo 함수 호출
-		List<Object> list = humanResourceService.getHumanResourceInfo();
+  		List<Object> list = humanResourceService.getHumanResourceInfo(data);
 		System.out.println(list);
 		Map<String, String> result = new HashMap();
-		result.put("recvData", "결과 url입니다.");
+		result.put("recvData", "https://www.naver.com");
 		return result;
 	}
 
