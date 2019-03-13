@@ -4,12 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.sinc.project.shrv.employeeTest">
-	<!-- <select id="employeeList" resultType="employee" flushCache="true" useCache="true">
+	<select id="employeeList" resultType="employee" flushCache="true" useCache="true">
 		SELECT 
 			EMP_ID, EMP_NAME, SALARY, HIRE_DATE, PHONE, EMAIL, WORK_STATE
 		FROM 
-			EMPLOYEETEST
-	</select> -->
+			EMPLOYEE
+	</select>
 	<select id="boardListRow" resultType="board" flushCache="true" useCache="true">
 		SELECT 
 			SEQ, TITLE, CONTENT, WRITER, REGDATE, CNT 
@@ -18,15 +18,5 @@
 		ORDER BY 
 			SEQ DESC
 	</select>
-</mapper>  
-
-
-
-
-
-
-
-
-
-
+</mapper>
 

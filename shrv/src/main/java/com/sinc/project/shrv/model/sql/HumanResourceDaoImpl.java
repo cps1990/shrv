@@ -18,6 +18,6 @@ public class HumanResourceDaoImpl implements HumanResourceDao {
 	@Override
 	public List<Object> listRow() {
 		System.out.println("HumanResourceDaoImpl listRow");
-		return session.selectList("com.sinc.project.shrv.employeeTest.boardListRow");
+		return session.selectList("com.sinc.project.shrv.employeeTest.employeeList");
 	}
 }

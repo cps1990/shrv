@@ -16,7 +16,7 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 	@Resource(name="humanResourceDao")
 	private HumanResourceDao humanResourceDao;
 
-	@Override
+	@Override 
 	public List<Object> getHumanResourceInfo() {
 		System.out.println("HumanResourceServiceImpl getHumanResourceInfo");
 		
