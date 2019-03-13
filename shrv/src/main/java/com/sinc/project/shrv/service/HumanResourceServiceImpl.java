@@ -22,8 +22,7 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 		
 		List<Object> list = new ArrayList<Object>();
 		// dataAnalysis() 호출
-		// dao 함수 호출하여 데이터 리턴
-		
+		// dataAnalysis 에서 데이터 분석하여 나온 dao 함수 호출하여 결과 리턴
 		return humanResourceDao.listRow();
 	}
 	
@@ -32,9 +31,10 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 	 * 각 데이터를 분석해서 호출해야하는 dao 함수 리턴
 	 * @return Object
 	 */
-	private Object dataAnalysis() {
+	@Override
+	public String dataAnalysis(String text) {
 		Object obj = new Object();
-		return obj;
+		return "";
 	}
 	
 }

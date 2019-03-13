@@ -6,4 +6,6 @@ import java.util.Map;
 public interface HumanResourceService {
 
 	public List<Object> getHumanResourceInfo();
+	
+	public String dataAnalysis(String text);
 }
