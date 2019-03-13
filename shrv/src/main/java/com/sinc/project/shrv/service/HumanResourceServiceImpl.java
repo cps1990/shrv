@@ -10,6 +10,10 @@ import org.springframework.stereotype.Service;
 
 import com.sinc.project.shrv.model.sql.HumanResourceDao;
 
+import kr.co.shineware.nlp.komoran.constant.DEFAULT_MODEL;
+import kr.co.shineware.nlp.komoran.core.Komoran;
+import kr.co.shineware.nlp.komoran.model.Token;
+
 @Service("humanResourceService")
 public class HumanResourceServiceImpl implements HumanResourceService {
 
@@ -35,8 +39,13 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 	@Override
 	public String dataAnalysis(String data) {
 		
+		Komoran komoran = new Komoran(DEFAULT_MODEL.FULL);
+		  List<Token> tokens = komoran.analyze(data).getTokenList();
+		        for(Token token : tokens) {
+		            System.out.println(token);
+		        }
 		
-		return "";
+		return "https://www.naver.com";
 	}
 	
 }

@@ -30,7 +30,8 @@ public class DataVisualizationCtrl {
   		List<Object> list = humanResourceService.getHumanResourceInfo(data);
 		System.out.println(list);
 		Map<String, String> result = new HashMap();
-		result.put("recvData", "https://www.naver.com");
+		String connUrl = humanResourceService.dataAnalysis(data);
+		result.put("recvData", connUrl);
 		return result;
 	}
 
