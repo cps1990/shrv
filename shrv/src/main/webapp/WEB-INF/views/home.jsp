@@ -45,7 +45,7 @@ $(document).ready(function () {
 			url : "/getHumanResourceInfo.do",
 			type : "post",
 			//data : { text : $("#searchType").val(), searchKeyword : $("#searchKeyword").val() },
-			data : { text : "text" },
+			data : { data : "data" },
 			dataType : "json",
 			success : function (data) {
 				console.log(data);

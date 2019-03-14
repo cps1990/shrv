@@ -1,14 +1,12 @@
 package com.sinc.project.shrv.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
-import org.springframework.ui.ModelMap;
 
 import com.sinc.project.shrv.model.sql.HumanResourceDao;
 
@@ -23,7 +21,7 @@ public class HumanResourceServiceImpl implements HumanResourceService {
 	private HumanResourceDao humanResourceDao;
 
 	@Override
-	public List<Object> getHumanResourceInfo(String data) {
+	public List<HashMap<String, Object>> getHumanResourceInfo(String data) {
 		System.out.println("HumanResourceServiceImpl getHumanResourceInfo");
 		
 		List<Object> list = new ArrayList<Object>();
