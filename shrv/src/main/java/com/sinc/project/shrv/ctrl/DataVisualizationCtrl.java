@@ -6,10 +6,10 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,25 +22,28 @@ public class DataVisualizationCtrl {
 	@Resource(name="humanResourceService")
 	private HumanResourceService humanResourceService;
 	
-	@RequestMapping(value="/shrv/getHumanResourceInfo.do", method=RequestMethod.POST)
+	// 결과데이터 저장 변수
+	List<Object> storedData;
+	
+	@RequestMapping(value="/getHumanResourceInfo.do", method=RequestMethod.POST)
 	@ResponseBody
-	public Map<String, String> getHumanResourceInfo (HttpServletRequest request, String data) {
+	public Map<String, String> getHumanResourceInfo (HttpServletRequest request, @RequestBody Map<String, Object> data) {
 		
 		System.out.println("getHumanResourceInfo Controller");
-		System.out.println(data);
-		// 받아온 데이터를 파라미터에 추가하여 서비스단 getHumanResourceInfo 함수 호출
-  		List<Object> list = humanResourceService.getHumanResourceInfo(data);
-		System.out.println(list);
-		HttpSession session = request.getSession();
-		if (0 < list.size()) {
-			session.setAttribute("data", list);
-		}
-		System.out.println("session "+ session.getAttribute("data"));
+		String str = (String)data.get("data");
+  		storedData = humanResourceService.getHumanResourceInfo(str);
+  		System.out.println(storedData);
 		
-		Map<String, String> result = new HashMap();
-		String connUrl = "/home";
+		Map<String, String> result = new HashMap<String, String>();
+		String connUrl = "http://10.149.178.248:8088/visualization.do";
 		result.put("recvData", connUrl);
 		return result;
+	}
+	
+	@RequestMapping(value = "/visualization.do")
+	public String visual(HttpServletRequest request, Model model) {
+		model.addAttribute("data", storedData );
+		return "visualization" ;
 	}
 
 }

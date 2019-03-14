@@ -35,14 +35,14 @@
 <button type="button" id="selectHumanResourceInfoBtn">직원 정보 보기</button><br><br>
 
 ${data}
-
+<div class="dataResult"/>
 <div class="bubbleChart"/>
 </body>
 <script>
 $(document).ready(function () {
 	$("#selectHumanResourceInfoBtn").click(function () {
 		$.ajax({
-			url : "/getHumanResourceInfo.do",
+			url : "/shrv/getHumanResourceInfo.do",
 			type : "post",
 			//data : { text : $("#searchType").val(), searchKeyword : $("#searchKeyword").val() },
 			data : { text : "text" },
